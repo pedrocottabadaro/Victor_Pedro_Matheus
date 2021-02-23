@@ -1,0 +1,230 @@
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ body{
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: #1D2130;
+    justify-content: center
+ }
+ .container {
+    margin: 0px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+ }
+.containerBotao{
+    
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+#botoes button{
+    margin-right: 10px;
+}
+
+#titleExercicios{
+    color: #F6C154;
+    font-size: 80px;
+}
+button{
+    background-color: #3B4157;
+    outline: none;
+    width: 250px;
+    height: 100px;
+    border: none;
+    transition-duration: 0.4s;
+    height: 100%;
+}
+
+.clicked{
+    background-color: #F6C154;
+}
+
+button:hover {
+    background-color: #F6C154; 
+    filter: brightness(85%);
+}
+#botoes{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 40px;
+    overflow-y: auto;
+    grid-gap: 40px;
+}
+#botoes button{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+div .numeroExercicio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.numeroExercicio h3{
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    color: white;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.numeroExercicio h4{
+    padding: 0;
+    margin: 10px;
+}
+button .capitulo{
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+    font-size: 25px;
+  
+}
+
+
+.hidden{
+    visibility: hidden;
+}
+
+
+.containerProgress{
+
+    position:relative;
+
+    width: 30%;
+}
+
+
+
+.imageLogout img{
+  
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#containerDropdown{
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+}
+  
+  
+#myDropdown{
+    margin-left: 15px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.containerDropDown{
+    display: flex;
+    align-self: baseline;
+}
+
+.containerProgress{
+
+    align-self: center;
+}
+
+.colorBar {
+    color: #000!important;
+    background-color: #F6C154;
+    filter: brightness(95%);
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3B4157;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F6C154;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
