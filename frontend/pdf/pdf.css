@@ -1,0 +1,22 @@
+body{
+    overflow: hidden;
+}
+
+embed {
+    width: 100%;
+    height: 100vh;
+}
+
+.title{
+    margin-top: -1px;
+    height: 10vh;
+    font-family: Source Code Pro;
+    display: flex;
+    justify-content: center;
+    background-color: #1D2130;
+    color: #F6C154;
+}
+
+.pdf {
+    margin: -8px -8px 0px -8px;
+}

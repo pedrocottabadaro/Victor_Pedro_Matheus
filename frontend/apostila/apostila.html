@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="apostila.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Apostila</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="container">
+
+            <div id="containerDropdown">
+                <div class="dropdown">
+                    <img src="../extra/menu.png" class="dropbtn" onclick="openNav()" alt="logout">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="../apostila/apostila.html">Apostila</a>
+                        <a href="../modulo/modulo.html">Módulos</a>
+                        <a href="../exercicio/exercicio.html">Exercícios</a>
+                        <a href="../info/tela-info-user.html">Alterar informações</a>
+                    </div>
+                    
+                    
+                </div> 
+    
+                
+                <div class="imageLogout">
+                    <img src="../extra/logout-button.png" onclick="sair()" alt="logout">
+                </div>             
+            </div>
+
+        <div id="botoes">
+            <ul>
+                <li onclick="showPdf(1)">
+                    <button>Lógica matemática</button>
+                </li>
+                <li onclick="showPdf(2)">
+                    <button>Operações lógicas</button>
+                </li>
+                <li onclick="showPdf(3)">
+                    <button>Tabela-Verdade</button>
+                </li>
+                <li onclick="showPdf(4)">
+                    <button>Tautologias, contradições e contigências</button>
+                </li>
+                <li onclick="showPdf(5)">
+                    <button>Implicação e equivalência Lógica</button>
+                </li>
+                <li onclick="showPdf(6)">
+                    <button>Álgebra das proposições</button>
+                </li>
+                <li onclick="showPdf(7)">
+                    <button>Método dedutivo</button>
+                </li>
+                <li onclick="showPdf(8)">
+                    <button>Regras de inferência</button>
+                </li>
+                <li onclick="showPdf(9)">
+                    <button>Verificação da validade</button>
+                </li>
+                <li onclick="showPdf(10)">
+                    <button>Demonstração condicional</button>
+                </li>
+                <li onclick="showPdf(11)">
+                    <button>Lógica de predicados</button>
+                </li>
+                <li onclick="showPdf(12)">
+                    <button>Qunatificadores</button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="apostila.js"></script>
+
+</html>

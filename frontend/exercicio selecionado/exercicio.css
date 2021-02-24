@@ -1,0 +1,155 @@
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: #1D2130;
+    justify-content: center;
+    font-family: Source Code Pro;
+ }
+
+ .container {
+    margin: 0px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+ }
+
+
+#botoes button{
+    margin-right: 10px;
+}
+button{
+    background-color: #3B4157;
+    outline: none;
+    width: 500px;
+    height: 70px;
+    border: none;
+    transition-duration: 0.4s;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+.clicked{
+    background-color: #F6C154;
+}
+
+button:hover {
+    background-color: #F6C154; 
+    filter: brightness(85%);
+    cursor: pointer;
+}
+#botoes{
+    display: flex;
+    overflow: auto;
+    white-space: break-spaces;
+    padding-bottom: 40px;
+    width: 100%;
+    justify-content: center;
+}
+#botoes button{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.imageLogout img{
+  
+    width: 100px;
+    margin-top: 10px;
+}
+
+#containerDropdown{
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -20px;
+}
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+  }
+  
+  
+#myDropdown{
+    margin-left: 15px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.containerDropDown{
+    display: flex;
+    align-self: baseline;
+}
+
+ul { 
+    list-style-type: none; 
+    display: grid;
+}
+
+.questao{
+    padding-left: 15px;
+    text-align: left;
+    background: rgba(59, 65, 87, 0.95);
+    color: #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 15px;
+    width: 82%;
+    margin-left: 7%;
+}
+
+.questao:hover{
+    border: 2px solid #F6C154;
+    padding: 18px;
+}
+
+.enunciado {
+    padding: 15px;
+    text-align: left;
+    background: rgba(59, 65, 87, 0.95);
+    color: #ddd;
+    border-radius: 20px;
+    width: 80%;
+    height: auto;
+}
