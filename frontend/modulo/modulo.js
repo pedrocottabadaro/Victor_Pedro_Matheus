@@ -17,8 +17,7 @@ function turnActive(btn){
 
             var capitulo=$( "#"+btn+" h4.capitulo" );
             capitulo.css("color", "white");
-            var url = "http://127.0.0.1:5500/exercicio/exercicio.html";
-            location.replace(url);
+            window.location.href='../exercicio/exercicio.html'
         }
         
     });

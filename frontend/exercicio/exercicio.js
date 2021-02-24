@@ -10,6 +10,8 @@ function turnActive(btn){
             $(this).removeClass("clicked");
             $("#"+this.id+" h3").css("color", "white");
             $("#"+this.id+" h4").css("color", "white");
+
+            window.location.href='../exercicioSelecionado/exercicio.html'
         }
         
     });
