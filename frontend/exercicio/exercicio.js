@@ -11,7 +11,7 @@ function turnActive(btn){
             $("#"+this.id+" h3").css("color", "white");
             $("#"+this.id+" h4").css("color", "white");
 
-            window.location.href='../exercicioSelecionado/exercicio.html'
+            window.location.href='../exercicioSelecionado/exercicioSelecionado.html'
         }
         
     });

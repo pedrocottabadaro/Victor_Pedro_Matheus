@@ -19,62 +19,63 @@ function getUrlParameter(sParam) {
         $("#title").text("Capítulo " + capitulo)
 
         switch (capitulo) {
-            case 1:
+            case '1':
             
                 $("#pdf").attr("src", "../extra/apostila/Cap 1 - Introdução à Lógica Matemática.pdf")
 
                 break;
-            case 2:
+            case '2':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 2 - Operaçãoes Lógicas sobre Preposições.pdf")
+                console.log('entrei')
                 
                 break;
-            case 3:
+            case '3':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 3 - Tabelas-Verdade de Proposições Compostas.pdf")
                 
                 break;
-            case 4:
+            case '4':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 4 - Tautologias, contradições e contigências.pdf")
                 
                 break;
-            case 5:
+            case '5':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 5 - Implicação e equivalência lógica.pdf")
                 
                 break;
-            case 6:
+            case '6':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 6 - Álgebra das proposições.pdf")
                 
                 break;
-            case 7:
+            case '7':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 7 - Método Dedutivo.pdf")
                 
                 break;
-            case 8:
+            case '8':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 8 - Argumentos e regras de inferência.pdf")
                 
                 break;
-            case 9:
+            case '9':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 9 - Vereficação da validade.pdf")
                 
                 break;
-            case 10:
+            case '10':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 10 - Demonstração condicional.pdf")
                 
                 break;
-            case 11:
+            case '11':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 11 - Lógica de Predicados e sentençãs abertas.pdf")
                 
                 break;
-            case 12:
+            case '12':
 
                 $("#pdf").attr("src", "../extra/apostila/Cap 12 - Quantificadores.pdf")
                 

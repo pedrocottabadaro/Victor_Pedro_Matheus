@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="exercicioSelecionado.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <title>Exercício</title>
 </head>
 <body>
@@ -31,22 +32,39 @@
         </div>
 
         <div class="enunciado">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae numquam accusamus dolores quia laboriosam qui tempora assumenda dolorum voluptatibus iste nemo, soluta laborum delectus aliquid omnis aut at sit tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur impedit praesentium maiores, debitis est, dignissimos mollitia quod deserunt sequi voluptatem alias ullam aspernatur, unde rerum laudantium blanditiis temporibus quidem error.</p>
+            <p>
+                Quatro suspeitos de praticar um crime fazem as seguintes declarações:
+            </p>
+            <p>
+                João: Carlos é o criminoso.
+            </p>
+            <p>
+                Pedro: eu não sou criminoso.
+            </p>
+            <p>                
+                Carlos: Paulo é o criminoso.
+            </p>
+            <p>
+                Paulo: Carlos está mentindo.
+            </p>
+            <p>
+                Sabendo que apenas um dos suspeitos mente, determine quem é o criminoso.
+            </p>
         </div>
 
         <div class="alternativas">
             <ul>
                 <li>
-                    <p class="questao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut ipsa modi ipsam ad ut natus iure, et iusto autem vero dolores ullam similique nostrum adipisci earum fugit quisquam nisi!</p>
+                    <p class="questao">João é o criminoso.</p>
                 </li>
                 <li>
-                    <p class="questao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut ipsa modi ipsam ad ut natus iure, et iusto autem vero dolores ullam similique nostrum adipisci earum fugit quisquam nisi!</p>
+                    <p class="questao">Pedro é o criminoso.</p>
                 </li>
                 <li>
-                    <p class="questao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut ipsa modi ipsam ad ut natus iure, et iusto autem vero dolores ullam similique nostrum adipisci earum fugit quisquam nisi!</p>
+                    <p class="questao">Carlos é o criminoso.</p>
                 </li>
                 <li>
-                    <p class="questao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut ipsa modi ipsam ad ut natus iure, et iusto autem vero dolores ullam similique nostrum adipisci earum fugit quisquam nisi!</p>
+                    <p class="questao">Paulo é o criminoso.</p>
                 </li>
             </ul>
         </div>
@@ -58,13 +76,18 @@
             </div>
     
             <div class="dica">
-                <img src="../extra/lamp.png" class="imgLamp" alt="Dica">
+                <a href="#dica" rel="modal:open"><img src="../extra/lamp.png" class="imgLamp" alt="Dica"></a>
             </div>
         </div>
     
 </body>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<div id="dica" class="modal">
+    <p>Se João diz a verdade, a declaração de Pedro pode ser verdadeira, a de Carlos seria falsa (por ser contraditória) e Paulo estaria falando a verdade.</p>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <script src="exercicioSelecionado.js"></script>
 
 </html>

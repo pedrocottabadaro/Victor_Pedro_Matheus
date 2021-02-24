@@ -149,7 +149,7 @@ ul {
     border-radius: 10px;
     cursor: pointer;
     padding: 15px;
-    width: 82%;
+    width: max-content;
     margin-left: 7%;
 }
 
@@ -240,4 +240,17 @@ ul {
     display: flex;
     justify-content: center;
     padding-left: 10%;
+  }
+
+  .alternativas {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-left: 11%;
+  }
+
+  #dica {
+      background-color: #F6C154;
+      color: black;
+      font-size: 20px;
   }
