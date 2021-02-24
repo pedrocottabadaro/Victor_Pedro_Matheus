@@ -133,6 +133,7 @@ button .exercicios{
     height: 80px;
     padding: 10px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .sidenav img{

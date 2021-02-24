@@ -13,6 +13,7 @@ html {
     background-color: #1D2130;
     justify-content: center;
     font-family: Source Code Pro;
+    font-size: 18px;
  }
 
  .container {
@@ -40,6 +41,11 @@ button{
     font-size: 18px;
 }
 
+.btnNav {
+    background-color: #F6C154 !important;
+    width: 15%;
+}
+
 .clicked{
     background-color: #F6C154;
 }
@@ -57,6 +63,13 @@ button:hover {
     width: 100%;
     justify-content: center;
 }
+
+.botoesNav {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
 #botoes button{
     display: inline-block;
     color: white;
@@ -66,8 +79,11 @@ button:hover {
 
 .imageLogout img{
   
-    width: 100px;
-    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 #containerDropdown{
@@ -83,9 +99,9 @@ button:hover {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    width: 80px;
-    height: 80px;
-  }
+    width: 70px;
+    height: 70px;
+}
   
   
 #myDropdown{
@@ -113,8 +129,6 @@ button:hover {
     display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
-
 .show {display: block;}
 
 .containerDropDown{
@@ -141,7 +155,6 @@ ul {
 
 .questao:hover{
     border: 2px solid #F6C154;
-    padding: 18px;
 }
 
 .enunciado {
@@ -153,3 +166,78 @@ ul {
     width: 80%;
     height: auto;
 }
+
+.sidenav img{
+    width: 80px;
+}
+
+#containerDropdown{
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#myDropdown{
+    margin-left: 15px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.containerDropDown{
+    display: flex;
+    align-self: baseline;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3B4157;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F6C154;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .imgLamp {
+      cursor: pointer;
+      width: 12%;
+  }
+
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+  }

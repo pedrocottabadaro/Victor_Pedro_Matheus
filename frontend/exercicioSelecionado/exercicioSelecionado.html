@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="exercicio.css">
+    <link rel="stylesheet" href="exercicioSelecionado.css">
     <title>Exercício</title>
 </head>
 <body>
@@ -12,16 +12,21 @@
 
         <div id="containerDropdown">
             <div class="dropdown">
-                <img src="../extra/menu.png" class="dropbtn" onclick="openDropdown()" alt="logout">
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#home">Home</a>
-                  <a href="#about">About</a>
-                  <a href="#contact">Contact</a>
+                <img src="../extra/menu.png" class="dropbtn" onclick="openNav()" alt="logout">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="../apostila/apostila.html">Apostila</a>
+                    <a href="../modulo/modulo.html">Módulos</a>
+                    <a href="../exercicio/exercicio.html">Exercícios</a>
+                    <a href="../info/tela-info-user.html">Alterar informações</a>
                 </div>
             </div> 
 
+            
+
+            
             <div class="imageLogout">
-                <img src="../extra/logout-button.png" alt="logout">
+                <img src="../extra/logout-button.png" onclick="sair()" alt="logout">
             </div>             
         </div>
 
@@ -46,9 +51,20 @@
             </ul>
         </div>
 
-        <div class="BotoesNav">
-            
+        <div class="bottom">
+            <div class="botoesNav">
+                <button class="btnNav">Voltar</button>
+                <button class="btnNav">Avançar</button>
+            </div>
+    
+            <div class="dica">
+                <img src="../extra/lamp.png" class="imgLamp" alt="Dica">
+            </div>
         </div>
     
 </body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="exercicioSelecionado.js"></script>
+
 </html>
