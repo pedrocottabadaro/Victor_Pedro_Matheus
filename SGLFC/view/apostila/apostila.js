@@ -47,5 +47,5 @@ function sair(){
   }
   
 function showPdf(n) {
-    window.open('../pdf/pdf.html?cap='+n)
+    window.open('../../extra/pdf/pdf.html?cap='+n)
 }  
