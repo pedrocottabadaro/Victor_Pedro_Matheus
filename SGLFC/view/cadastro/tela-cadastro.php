@@ -1,3 +1,10 @@
+
+<?php
+    require('../../controller');
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
