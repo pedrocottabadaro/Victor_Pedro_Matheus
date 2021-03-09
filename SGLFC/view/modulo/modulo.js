@@ -2,7 +2,7 @@ function sair(){
   window.location.href='../login/tela-login.php'
 }
 
-function turnActive(btn){
+function turnActive(btn, n){
     button = document.getElementById(btn);
     // btn.classlist.toggle("hidden");
     $("button").each(function(){
@@ -17,7 +17,7 @@ function turnActive(btn){
 
             var capitulo=$( "#"+btn+" h4.capitulo" );
             capitulo.css("color", "white");
-            window.location.href='../exercicio/exercicio.html'
+            window.location.href='../exercicio/exercicio.php?modulo=' + n
         }
         
     });
