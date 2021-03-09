@@ -1,11 +1,11 @@
-function cadastrar(){
+function alterar(){
 
     let valida = true
 
     if ($('#senha').val() != $('#senha2').val()) {
 
-      $('#senha1').text("")
-      $('#senha1').val("")
+      $('#senha').text("")
+      $('#senha').val("")
       $('#senha2').text("")
       $('#senha2').val("")
       alert('Senhas não batem!')

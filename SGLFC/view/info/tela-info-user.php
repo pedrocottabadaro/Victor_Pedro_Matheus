@@ -1,3 +1,18 @@
+<?php 
+
+session_start();
+
+require('../../model/usuario/usuario.php');
+require('../../database/connection.php');
+
+$usuario = new Usuario;
+$usuario = $usuario->getUsuario($_SESSION['id']);
+
+// echo '<pre>';
+// print_r($usuario);
+// echo '</pre>';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,14 +53,15 @@
 
             <div class= "field">
                 <input type="hidden" name="action" value="update">
-                <input type="text" id="nome" name="nome" placeholder="XXXXXXXX" required>
-                <input type="text" id="email" name="email" placeholder="XXXXXXX@XXXXX.COM" required>
-                <input type="text" id="instituicao" name="instituicao" placeholder="XXXX" required>
-                <input type="password" id="senha" name="senha" placeholder="**********" required>
-                <input type="password" id="senha2" name="senha2" placeholder="**********" required>
+                <input type="hidden" name="id" value="<?=$usuario['CD_USUARIO']?>">
+                <input type="text" id="nome" name="nome" value="<?=$usuario['NOME']?>" required>
+                <input type="text" id="email" name="email" value="<?=$usuario['EMAIL']?>" required>
+                <input type="text" id="instituicao" name="instituicao" value="<?=$usuario['INSTITUICAO']?>" required>
+                <input type="password" id="senha" name="senha" value="<?=$usuario['SENHA']?>" required>
+                <input type="password" id="senha2" name="senha2" value="<?=$usuario['SENHA']?>" required>
             </div>
            
-            <input class="alterar" type="submit" value="ALTERAR" onclick="altera()">
+            <input class="alterar" type="submit" value="ALTERAR" onclick="alterar()">
 
         </form>
      
@@ -54,6 +70,7 @@
 
 </body>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="tela-info-user.js"></script>
 
 </html>

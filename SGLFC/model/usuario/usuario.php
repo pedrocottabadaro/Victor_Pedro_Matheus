@@ -29,9 +29,7 @@ class Usuario{
 
        
 
-        $sql = "SELECT * FROM usuario WHERE CD_USUARIO=$id";
-
-       
+        $sql = "SELECT * FROM usuario WHERE CD_USUARIO = $id";
 
         try{
 
@@ -53,11 +51,11 @@ class Usuario{
     }
 
 
-    public function updateUsuario($id,$nome,$senha,$email,$instituicao)
+    public function updateUsuario($id, $nome, $senha, $email, $instituicao)
     {
         global $conn;
 
-        $sql = "UPDATE usuario  SET nome = '{$placa}', SENHA = '{$senha}', EMAIL = '{$email}', INSTITUICAO = '{$instituicao}' WHERE CD_USUARIO = $id";
+        $sql = "UPDATE usuario  SET NOME = '{$nome}', SENHA = '{$senha}', EMAIL = '{$email}', INSTITUICAO = '{$instituicao}' WHERE CD_USUARIO = $id";
 
         try {
 
@@ -85,9 +83,16 @@ class Usuario{
 
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
                 
-            $valida = (empty($row)) ? false :  true;
+            if (!empty($row)) {
 
-            return $valida;
+                return $row['CD_USUARIO'];
+
+            } else {
+
+                return false;
+
+            }
+
 
         } 
         catch(PDOException $e){

@@ -17,18 +17,17 @@ else if($_POST['action'] == 'update'){
     
     $usuario->updateUsuario($_POST['id'], $_POST['nome'], $_POST['senha'], $_POST['email'], $_POST['instituicao']);
 
-    header('Location:index.php');
+    header('Location:../view/info/tela-info-user.php');
     
 } else if($_POST['action'] == 'login'){
     
-    echo "entrei <br>";
-    
     $valida = $usuario->validaLogin($_POST['email'], $_POST['senha']);
 
-    echo "valida: $valida";
 
     if ($valida) {
 
+        session_start();
+        $_SESSION['id'] = $valida;
         header('Location:../view/modulo/modulo.html');
 
     } else {
