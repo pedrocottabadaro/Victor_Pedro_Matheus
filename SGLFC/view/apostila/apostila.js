@@ -1,5 +1,5 @@
 function sair(){
-    window.location.href='../login/tela-login.html'
+    window.location.href='../login/tela-login.php'
   }
   
   function turnActive(btn){

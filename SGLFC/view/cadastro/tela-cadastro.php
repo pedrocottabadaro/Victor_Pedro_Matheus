@@ -1,10 +1,4 @@
 
-<?php
-    require('../../controller');
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,19 +20,20 @@
 
         <h1>Precisamos de algumas informações suas</h1>
          
-        <form class="formulario" method="post">
+        <form class="formulario" method="post" action="../../controller/controller.php">
 
             <div class= "field">
-                <input type="text" id="nome" name="nome" placeholder="Nome completo">
-                <input type="text" id="email" name="email" placeholder="E-mail">
-                <input type="text" id="instituicao" name="instituicao" placeholder="Instituição de Ensino">
-                <input type="password" id="senha" name="senha" placeholder="Digite uma senha">
-                <input type="password" id="senha2" name="senha2" placeholder="Digite novamente a senha">
+                <input type="hidden" name="action" value="create">
+                <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                <input type="text" id="email" name="email" placeholder="E-mail" required>
+                <input type="text" id="instituicao" name="instituicao" placeholder="Instituição de Ensino" required>
+                <input type="password" id="senha" name="senha" placeholder="Digite uma senha" required>
+                <input type="password" id="senha2" name="senha2" placeholder="Digite novamente a senha" required>
             </div>
 
-            <input type="reset" name="entrar" value="CADASTRAR" onclick="cadastrar()">
+            <input type="submit" name="entrar" value="CADASTRAR" onclick="cadastrar()">
             <div class="field">
-                <a href="../login/tela-login.html">Já tenho uma conta</label>
+                <a href="../login/tela-login.php">Já tenho uma conta</label>
             </div>
 
         </form>
@@ -47,6 +42,8 @@
       </div>
 
 </body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="tela-cadastro.js"></script>
 
 </html>

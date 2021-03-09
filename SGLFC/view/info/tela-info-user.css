@@ -136,7 +136,20 @@ input[type=password]{
     margin: 10px;
 }
 
-input[type=reset]{
+input[type=submit]{
+    display: block;
+    background-color: #F6C154;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 110px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.alterar {
     display: block;
     background-color: #F6C154;
     height: 35px;

@@ -1,8 +1,6 @@
 <?php
 
-require('database/connection.php');
-
-class Carro{
+class Usuario{
 
     public function createUsuario($nome,$senha,$email,$instituicao){
         global $conn;
@@ -67,6 +65,35 @@ class Carro{
             $stmt->execute();
         } catch (PDOException $e) {
             echo $e->getMessage();
+        }
+    }
+
+    public function validaLogin($email, $senha)
+    {
+        global $conn;
+
+       
+
+        $sql = "SELECT * FROM usuario WHERE EMAIL = '$email' and SENHA = '$senha'";
+
+       
+
+        try{
+
+            $stmt=$conn->prepare($sql);
+            $stmt->execute();
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                
+            $valida = (empty($row)) ? false :  true;
+
+            return $valida;
+
+        } 
+        catch(PDOException $e){
+
+            echo $e->getMessage();
+
         }
     }
 

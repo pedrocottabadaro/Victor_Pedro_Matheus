@@ -33,5 +33,5 @@ function closeNav() {
 }
 
 function sair(){
-  window.location.href='../login/tela-login.html'
+  window.location.href='../login/tela-login.php'
 }

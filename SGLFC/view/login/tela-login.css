@@ -188,7 +188,7 @@ input[type=password]{
     outline: none;
 }
 
-input[type=button]{
+input[type=submit]{
     display: block;
     background-color: #F6C154;
     height: 35px;

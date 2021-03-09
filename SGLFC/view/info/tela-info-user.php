@@ -1,8 +1,3 @@
-<?php
-    require('../../controller');
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,17 +34,18 @@
             <h1 id="titleInfo">Alterar informações</h1>
         </div>
 
-        <form class="formulario" method="post">
+        <form class="formulario" method="post" action="../../controller/controller.php">
 
             <div class= "field">
-                <input type="text" id="nome" name="nome" placeholder="XXXXXXXX">
-                <input type="text" id="email" name="email" placeholder="XXXXXXX@XXXXX.COM">
-                <input type="text" id="instituicao" name="instituicao" placeholder="XXXX">
-                <input type="password" id="senha" name="senha" placeholder="**********">
-                <input type="password" id="senha2" name="senha2" placeholder="**********">
+                <input type="hidden" name="action" value="update">
+                <input type="text" id="nome" name="nome" placeholder="XXXXXXXX" required>
+                <input type="text" id="email" name="email" placeholder="XXXXXXX@XXXXX.COM" required>
+                <input type="text" id="instituicao" name="instituicao" placeholder="XXXX" required>
+                <input type="password" id="senha" name="senha" placeholder="**********" required>
+                <input type="password" id="senha2" name="senha2" placeholder="**********" required>
             </div>
            
-            <input type="reset" name="alterar" value="ALTERAR" onclick="altera()">
+            <input class="alterar" type="submit" value="ALTERAR" onclick="altera()">
 
         </form>
      
