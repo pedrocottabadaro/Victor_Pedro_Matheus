@@ -118,13 +118,13 @@ class Exercicio{
         }
     }
 
-    public function validaLogin($email, $senha)
+    public function verificaResposta($id)
     {
         global $conn;
 
        
 
-        $sql = "SELECT * FROM usuario WHERE EMAIL = '$email' and SENHA = '$senha'";
+        $sql = "SELECT * FROM resposta WHERE CD_RESPOSTA = $id";
 
        
 
@@ -135,9 +135,9 @@ class Exercicio{
 
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
                 
-            if (!empty($row)) {
+            if ($row['IC_CORRETO'] == 1) {
 
-                return $row['CD_USUARIO'];
+                return true;
 
             } else {
 

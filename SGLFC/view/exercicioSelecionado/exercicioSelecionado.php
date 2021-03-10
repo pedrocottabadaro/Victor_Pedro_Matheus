@@ -58,7 +58,7 @@ $avancar = $exercicios->verificaNav($_GET['ex']);
             <ul>
                 <?php foreach($alternativas as $key => $value) {?>
                 <li>
-                    <p class="questao"><?= $value['DC_ALTERNATIVA']?></p>
+                    <p class="questao" onclick="verificaResposta(<?= $value['CD_RESPOSTA']?>)"><?= $value['DC_ALTERNATIVA']?></p>
                 </li>
                 <?php }?>
             </ul>

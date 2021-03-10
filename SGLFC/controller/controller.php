@@ -1,8 +1,10 @@
 <?php
 require('../database/connection.php');
 require('../model/usuario/usuario.php');
+require('../model/exercicio/exercicio.php');
 
 $usuario = new Usuario();
+$exercicio = new Exercicio();
 
 
 if($_POST['action'] == 'create'){
@@ -36,5 +38,9 @@ else if($_POST['action'] == 'update'){
         
     }
     
+} else if ($_POST['action'] == 'resposta') {
+
+    echo $valida = $exercicio->verificaResposta($_POST['alternativa']);
+
 }
 
