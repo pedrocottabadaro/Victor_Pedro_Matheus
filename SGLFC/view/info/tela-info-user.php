@@ -33,10 +33,10 @@ $usuario = $usuario->getUsuario($_SESSION['id']);
 
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">Apostila</a>
-                    <a href="../modulo/modulo.html">Módulos</a>
-                    <a href="../exercicio/exercicio.html">Exercícios</a>
-                    <a href="../info/tela-info-user.html">Alterar informações</a>
+                    <a href="../apostila/apostila.html">Apostila</a>
+                    <a href="../modulo/modulo.php">Módulos</a>
+                    <a href="../exercicio/exercicio.php">Exercícios</a>
+                    <a href="../info/tela-info-user.php">Alterar informações</a>
                 </div>
             </div> 
 

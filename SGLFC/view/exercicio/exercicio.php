@@ -2,9 +2,26 @@
 
 require('../../model/exercicio/exercicio.php');
 require('../../database/connection.php');
+require('../../model/barraProgresso/barraProgresso.php');
 
 $exercicios = new Exercicio;
 $exercicios = $exercicios->getExercicios($_GET['modulo']);
+
+
+session_start();
+$valida=$_SESSION['id'];
+
+
+
+$BarraProgresso = new BarraProgresso;
+$numExerciciosFeitos = $BarraProgresso->getNumExerciciosFeitos($valida);
+$numExerciciosFeitos = $numExerciciosFeitos['NUM'];
+$numExercicios=$BarraProgresso->getNumExercicios();
+$numExercicios=$numExercicios['NUM'];
+$porc=floatval($numExerciciosFeitos)/floatval($numExercicios);
+$porc=$porc*100;
+
+
 
 ?>
 
@@ -29,17 +46,17 @@ $exercicios = $exercicios->getExercicios($_GET['modulo']);
 
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">Apostila</a>
-                    <a href="../modulo/modulo.html">Módulos</a>
-                    <a href="../exercicio/exercicio.html">Exercícios</a>
-                    <a href="../info/tela-info-user.html">Alterar informações</a>
+                    <a href="../apostila/apostila.html">Apostila</a>
+                    <a href="../modulo/modulo.php">Módulos</a>
+                    <a href="../exercicio/exercicio.php">Exercícios</a>
+                    <a href="../info/tela-info-user.php">Alterar informações</a>
                 </div>
             </div> 
             
             <div class="containerProgress">
 
                 <div class="w3-light-grey w3-round-xlarge">
-                    <div class="w3-container colorBar w3-round-xlarge" style="width:25%;height: 30px;"></div>
+                    <div class="w3-container colorBar w3-round-xlarge" style="width:<?= $porc?>%;height: 30px;"></div>
                 </div>
     
             </div> 

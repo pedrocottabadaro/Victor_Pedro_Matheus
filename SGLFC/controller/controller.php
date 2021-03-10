@@ -24,13 +24,13 @@ else if($_POST['action'] == 'update'){
 } else if($_POST['action'] == 'login'){
     
     $valida = $usuario->validaLogin($_POST['email'], $_POST['senha']);
-
-
+   
+  
     if ($valida) {
-
+ 
         session_start();
         $_SESSION['id'] = $valida;
-        header('Location:../view/modulo/modulo.html');
+        header('Location:../view/modulo/modulo.php');
 
     } else {
 
