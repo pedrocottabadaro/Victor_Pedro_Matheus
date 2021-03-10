@@ -1,13 +1,13 @@
 
 
 
-function turnActive(btn, n){
+function turnActive(btn, n, m){
  
   button = document.getElementById(btn);
   // btn.classlist.toggle("hidden");
   if(button.classList.contains("clicked")){
       button.classList.toggle("clicked");
-      window.location.href='../exercicioSelecionado/exercicioSelecionado.php?ex=' + n;
+      window.location.href='../exercicioSelecionado/exercicioSelecionado.php?ex=' + n + '&mod=' + m;
   }
 
 

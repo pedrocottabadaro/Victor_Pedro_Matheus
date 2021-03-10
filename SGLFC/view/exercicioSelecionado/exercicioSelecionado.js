@@ -10,7 +10,7 @@ function sair(){
     document.getElementById("mySidenav").style.width = "0";
   }
 
-  function verificaResposta(alt, ex) {
+  function verificaResposta(alt, ex, m) {
 
     $.ajax({
       type: 'POST',
@@ -26,7 +26,7 @@ function sair(){
             url: '../../controller/controller.php',
             data: {action: "insertResposta", exercicio: ex, valor: 1},
             success: function(resposta) {
-              location.reload();
+              window.location.href='../exercicio/exercicio.php?modulo=' + m
             }
           });
 
