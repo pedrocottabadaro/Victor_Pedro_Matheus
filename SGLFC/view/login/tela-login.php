@@ -34,7 +34,7 @@
             <input type="submit" name="entrar" value="ENTRAR">
 
             <div class="field">
-                <label>Esqueceu sua senha?</label>
+
                 <a href="../cadastro/tela-cadastro.php">Novo por aqui? Cadastre-se</a>
             </div>
         </form>
