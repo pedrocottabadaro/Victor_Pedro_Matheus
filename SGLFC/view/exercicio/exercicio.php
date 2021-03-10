@@ -48,7 +48,6 @@ $porc=$porc*100;
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="../apostila/apostila.html">Apostila</a>
                     <a href="../modulo/modulo.php">Módulos</a>
-                    <a href="../exercicio/exercicio.php">Exercícios</a>
                     <a href="../info/tela-info-user.php">Alterar informações</a>
                 </div>
             </div> 
