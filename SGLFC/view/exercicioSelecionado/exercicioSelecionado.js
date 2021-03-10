@@ -36,6 +36,23 @@ function sair(){
       }
   });
   }
+
+  function back(m, e) {
+
+    e -= 1
+
+    window.location.href='../exercicioSelecionado/exercicioSelecionado.php?ex=' + e + '&mod=' + m
+
+  }
+
+
+  function next(m, e) {
+
+    e += 1
+
+    window.location.href='../exercicioSelecionado/exercicioSelecionado.php?ex=' + e + '&mod=' + m
+
+  }
   
   
   

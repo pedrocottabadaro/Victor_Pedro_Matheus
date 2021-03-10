@@ -94,7 +94,7 @@ class Exercicio{
     {
         global $conn;
 
-        $sql = "SELECT COUNT(CD_PERGUNTA) CONTADOR  FROM pergunta WHERE CD_PERGUNTA = 1 AND MODULO = (SELECT MODULO FROM pergunta WHERE CD_PERGUNTA = 1)";
+        $sql = "SELECT COUNT(CD_PERGUNTA) CONTADOR  FROM pergunta WHERE MODULO = (SELECT MODULO FROM pergunta WHERE CD_PERGUNTA = $id)";
 
         try{
 

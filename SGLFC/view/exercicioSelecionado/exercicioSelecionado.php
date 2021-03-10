@@ -67,8 +67,8 @@ $avancar = $exercicios->verificaNav($_GET['ex']);
 
         <div class="bottom">
             <div class="botoesNav">
-                <button class="btnNav" <?= $voltar?>>Voltar</button>
-                <button class="btnNav" <?= $avancar?>>Avançar</button>
+                <button class="btnNav" <?= $voltar?> onclick="back(<?= $_GET['mod']?>, <?= $_GET['ex']?>)">Voltar</button>
+                <button class="btnNav" <?= $avancar?> onclick="next(<?= $_GET['mod']?>, <?= $_GET['ex']?>)">Avançar</button>
             </div>
     
             <div class="dica">
