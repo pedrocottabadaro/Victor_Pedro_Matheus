@@ -49,7 +49,6 @@
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="../apostila/apostila.html">Apostila</a>
                     <a href="../modulo/modulo.php">Módulos</a>
-                    <a href="../exercicio/exercicio.php">Exercícios</a>
                     <a href="../info/tela-info-user.php">Alterar informações</a>
 
                 </div>
@@ -88,9 +87,7 @@
                     <div class="numeroModulo">
 
                         <h3>1</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">30%</h4>
                         <h4 class="capitulo">Introdução</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 2/7</h4>
                     
                     </div>
 
@@ -100,9 +97,7 @@
                     <div class="numeroModulo">
 
                         <h3>2</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">50%</h4>
                         <h4 class="capitulo">Proposições</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 1/2</h4>
                     
                     </div>
 
@@ -112,9 +107,7 @@
                     <div class="numeroModulo">
 
                         <h3>3</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">6%</h4>
                         <h4 class="capitulo">Tabelas-Verdade</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 1/15</h4>
                     
                     </div>
 
@@ -125,10 +118,8 @@
                     <div class="numeroModulo">
 
                         <h3>4</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">20%</h4>
                         <h4 class="capitulo">Tautologias</h4>
         
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 2/10</h4>
                     
                     </div>
 
@@ -138,10 +129,8 @@
                     <div class="numeroModulo">
 
                         <h3>5</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">100%</h4>
                         <h4 class="capitulo">Implicação e</h4>
                         <h4 class="capitulo">Equivalência Lógica</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 7/7</h4>
                     
                     </div>
 
@@ -151,10 +140,8 @@
                     <div class="numeroModulo">
 
                         <h3>6</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">30%</h4>
                         <h4 class="capitulo">Algebra das</h4>
                         <h4 class="capitulo">Proposições</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 2/7</h4>
                     
                     </div>
 
@@ -165,9 +152,7 @@
                     <div class="numeroModulo">
 
                         <h3>7</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">40%</h4>
                         <h4 class="capitulo">Método Dedutivo</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 4/10</h4>
                     
                     </div>
 
@@ -178,10 +163,8 @@
                     <div class="numeroModulo">
 
                         <h3>8</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">0%</h4>
                         <h4 class="capitulo">Argumentos e</h4>
                         <h4 class="capitulo">Inferências</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 0/3</h4>
                     
                     </div>
 
@@ -191,10 +174,8 @@
                     <div class="numeroModulo">
 
                         <h3>9</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">71%</h4>
                         <h4 class="capitulo">Verificação</h4>
                         <h4 class="capitulo">da Validade</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 5/7</h4>
                     
                     </div>
 
@@ -205,10 +186,8 @@
                     <div class="numeroModulo">
 
                         <h3>10</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">33%</h4>
                         <h4 class="capitulo">Demonstração</h4>
                         <h4 class="capitulo">Condicional</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 1/3</h4>
                     
                     </div>
 
@@ -218,10 +197,8 @@
                     <div class="numeroModulo">
 
                         <h3>11</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">30%</h4>
                         <h4 class="capitulo">Predicados e</h4>
                         <h4 class="capitulo">Sentenças Abertas</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 2/7</h4>
                     
                     </div>
 
@@ -231,9 +208,7 @@
                     <div class="numeroModulo">
 
                         <h3>12</h3>
-                        <h4 name="porCompleto" class="porCompleto hidden">80%</h4>
                         <h4 class="capitulo">Quantificadores</h4>
-                        <h4 name="numExer" class="exercicios hidden">Exercicios 8/10</h4>
                     
                     </div>
 
