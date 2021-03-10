@@ -1,16 +1,10 @@
 <?php
 
-session_start();
-
 require('../../model/exercicio/exercicio.php');
 require('../../database/connection.php');
 
 $exercicios = new Exercicio;
 $exercicios = $exercicios->getExercicios($_GET['modulo']);
-
-// echo '<pre>';
-// print_r($exercicios);
-// echo '</pre>';
 
 ?>
 
@@ -67,10 +61,10 @@ $exercicios = $exercicios->getExercicios($_GET['modulo']);
                 
                 <?php foreach ($exercicios as $key => $value) {?>
 
-                    <button id='exer1' onclick="turnActive('exer1')">
+                    <button id='exer1' onclick="turnActive('exer1', '<?= $value?>')">
                         <div class="numeroExercicio">
 
-                            <h3><?= $key?></h3>
+                            <h3><?= $value?></h3>
                             
                         </div>
 

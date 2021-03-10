@@ -1,3 +1,18 @@
+<?php
+
+require('../../model/exercicio/exercicio.php');
+require('../../database/connection.php');
+
+$exercicios = new Exercicio;
+$exercicio = $exercicios->getExercicio($_GET['ex']);
+$alternativas = $exercicios->getAlternativas($_GET['ex']);
+
+// echo '<pre>';
+// print_r($alternativas);
+// echo '</pre>';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-Br">
 <head>
@@ -17,9 +32,9 @@
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="../apostila/apostila.html">Apostila</a>
-                    <a href="../modulo/modulo.html">Módulos</a>
-                    <a href="../exercicio/exercicio.html">Exercícios</a>
-                    <a href="../info/tela-info-user.html">Alterar informações</a>
+                    <a href="../modulo/modulo.php">Módulos</a>
+                    <a href="../exercicio/exercicio.php">Exercícios</a>
+                    <a href="../info/tela-info-user.php">Alterar informações</a>
                 </div>
             </div> 
 
@@ -33,39 +48,17 @@
 
         <div class="enunciado">
             <p>
-                Quatro suspeitos de praticar um crime fazem as seguintes declarações:
-            </p>
-            <p>
-                João: Carlos é o criminoso.
-            </p>
-            <p>
-                Pedro: eu não sou criminoso.
-            </p>
-            <p>                
-                Carlos: Paulo é o criminoso.
-            </p>
-            <p>
-                Paulo: Carlos está mentindo.
-            </p>
-            <p>
-                Sabendo que apenas um dos suspeitos mente, determine quem é o criminoso.
+                <?= $exercicio['ENUNCIADO']?>
             </p>
         </div>
 
         <div class="alternativas">
             <ul>
+                <?php foreach($alternativas as $key => $value) {?>
                 <li>
-                    <p class="questao">João é o criminoso.</p>
+                    <p class="questao"><?= $value['DC_ALTERNATIVA']?></p>
                 </li>
-                <li>
-                    <p class="questao">Pedro é o criminoso.</p>
-                </li>
-                <li>
-                    <p class="questao">Carlos é o criminoso.</p>
-                </li>
-                <li>
-                    <p class="questao">Paulo é o criminoso.</p>
-                </li>
+                <?php }?>
             </ul>
         </div>
 
@@ -83,7 +76,7 @@
 </body>
 
 <div id="dica" class="modal">
-    <p>Se João diz a verdade, a declaração de Pedro pode ser verdadeira, a de Carlos seria falsa (por ser contraditória) e Paulo estaria falando a verdade.</p>
+    <p><?= $exercicio['DICA']?></p>
   </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>

@@ -1,7 +1,7 @@
 
 
 
-function turnActive(btn){
+function turnActive(btn, n){
     button = document.getElementById(btn);
     // btn.classlist.toggle("hidden");
     $("button").each(function(){
@@ -11,7 +11,7 @@ function turnActive(btn){
             $("#"+this.id+" h3").css("color", "white");
             $("#"+this.id+" h4").css("color", "white");
 
-            window.location.href='../exercicioSelecionado/exercicioSelecionado.html'
+            window.location.href='../exercicioSelecionado/exercicioSelecionado.php?ex=' + n
         }
         
     });

@@ -6,9 +6,38 @@ class Exercicio{
 
         global $conn;
 
-       
+        $dados = array();
 
         $sql = "SELECT CD_PERGUNTA FROM pergunta WHERE MODULO = $modulo";
+
+        try{
+
+            $stmt=$conn->prepare($sql);
+            $stmt->execute();
+
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+                $dados[] = $row['CD_PERGUNTA'];
+
+            }
+            
+            return $dados;
+
+
+        } 
+        catch(PDOException $e){
+            echo $e->getMessage();
+        }
+
+    }
+
+    public function getExercicio($id){
+
+        global $conn;
+
+       
+
+        $sql = "SELECT * FROM pergunta WHERE CD_PERGUNTA = $id";
 
         try{
 
@@ -29,24 +58,26 @@ class Exercicio{
 
     }
 
-    public function getUsuario($id){
+    public function getAlternativas($id){
 
         global $conn;
 
-       
+        $dados = array();
 
-        $sql = "SELECT * FROM usuario WHERE CD_USUARIO = $id";
+        $sql = "SELECT * FROM resposta WHERE CD_PERGUNTA = $id";
 
         try{
 
             $stmt=$conn->prepare($sql);
             $stmt->execute();
 
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+                $dados[] = $row;
+
+            }
             
-            
-            return $row;
+            return $dados;
 
 
         } 
