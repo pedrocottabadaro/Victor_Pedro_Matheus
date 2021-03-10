@@ -88,17 +88,32 @@ class Exercicio{
     }
 
 
-    public function updateUsuario($id, $nome, $senha, $email, $instituicao)
+    public function verificaNav($id)
     {
         global $conn;
 
-        $sql = "UPDATE usuario  SET NOME = '{$nome}', SENHA = '{$senha}', EMAIL = '{$email}', INSTITUICAO = '{$instituicao}' WHERE CD_USUARIO = $id";
+        $sql = "SELECT COUNT(CD_PERGUNTA) CONTADOR  FROM pergunta WHERE CD_PERGUNTA = 1 AND MODULO = (SELECT MODULO FROM pergunta WHERE CD_PERGUNTA = 1)";
 
-        try {
+        try{
 
-            $stmt = $conn->prepare($sql);
+            $stmt=$conn->prepare($sql);
             $stmt->execute();
-        } catch (PDOException $e) {
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if ($id == $row['CONTADOR']) {
+
+                return "disabled";
+               
+            } else {
+
+                return "";
+
+            }
+
+
+        } 
+        catch(PDOException $e){
             echo $e->getMessage();
         }
     }

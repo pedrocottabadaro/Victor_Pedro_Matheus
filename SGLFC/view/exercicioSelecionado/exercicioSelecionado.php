@@ -6,6 +6,8 @@ require('../../database/connection.php');
 $exercicios = new Exercicio;
 $exercicio = $exercicios->getExercicio($_GET['ex']);
 $alternativas = $exercicios->getAlternativas($_GET['ex']);
+$voltar = ($_GET['ex'] == 1) ? "disabled" : "";
+$avancar = $exercicios->verificaNav($_GET['ex']);
 
 // echo '<pre>';
 // print_r($alternativas);
@@ -64,8 +66,8 @@ $alternativas = $exercicios->getAlternativas($_GET['ex']);
 
         <div class="bottom">
             <div class="botoesNav">
-                <button class="btnNav">Voltar</button>
-                <button class="btnNav">Avançar</button>
+                <button class="btnNav" <?= $voltar?>>Voltar</button>
+                <button class="btnNav" <?= $avancar?>>Avançar</button>
             </div>
     
             <div class="dica">
