@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 class Exercicio{
 
     public function getExercicios($modulo){
@@ -151,6 +153,52 @@ class Exercicio{
 
             echo $e->getMessage();
 
+        }
+    }
+
+    public function insertResposta($id, $valor)
+    {
+        global $conn;
+
+       
+
+        $sql = "INSERT INTO usuario_pergunta VALUES (NULL, {$_SESSION['id']}, $id, $valor)";
+
+        try{
+
+            $stmt=$conn->prepare($sql);
+            $stmt->execute();
+
+        } 
+        catch(PDOException $e){
+            echo $e->getMessage();
+        }
+    }
+
+    public function getResposta($id)
+    {
+        global $conn;
+
+       
+
+        $sql = "SELECT * FROM usuario_pergunta WHERE CD_USUARIO = {$_SESSION['id']} AND CD_PERGUNTA = $id";
+
+        try{
+
+            $stmt=$conn->prepare($sql);
+            $stmt->execute();
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!empty($row)) {
+
+                return $row;
+                
+            }
+
+        } 
+        catch(PDOException $e){
+            echo $e->getMessage();
         }
     }
 

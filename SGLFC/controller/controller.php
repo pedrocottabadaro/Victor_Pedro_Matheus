@@ -42,5 +42,9 @@ else if($_POST['action'] == 'update'){
 
     echo $valida = $exercicio->verificaResposta($_POST['alternativa']);
 
+} else if ($_POST['action'] == 'insertResposta') {
+
+   echo $exercicio->insertResposta($_POST['exercicio'], $_POST['valor']);
+
 }
 

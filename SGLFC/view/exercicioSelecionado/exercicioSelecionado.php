@@ -4,6 +4,7 @@ require('../../model/exercicio/exercicio.php');
 require('../../database/connection.php');
 
 $exercicios = new Exercicio;
+$resposta = $exercicios->getResposta($_GET['ex']);
 $exercicio = $exercicios->getExercicio($_GET['ex']);
 $alternativas = $exercicios->getAlternativas($_GET['ex']);
 $voltar = ($_GET['ex'] == 1) ? "disabled" : "";
@@ -58,7 +59,7 @@ $avancar = $exercicios->verificaNav($_GET['ex']);
             <ul>
                 <?php foreach($alternativas as $key => $value) {?>
                 <li>
-                    <p class="questao" onclick="verificaResposta(<?= $value['CD_RESPOSTA']?>)"><?= $value['DC_ALTERNATIVA']?></p>
+                    <p class="questao" id="<?= "questao".$value['CD_RESPOSTA']?>" onclick="verificaResposta(<?= $value['CD_RESPOSTA']?>, <?=$_GET['ex']?>)"><?= $value['DC_ALTERNATIVA']?></p>
                 </li>
                 <?php }?>
             </ul>

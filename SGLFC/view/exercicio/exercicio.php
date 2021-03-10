@@ -4,11 +4,11 @@ require('../../model/exercicio/exercicio.php');
 require('../../database/connection.php');
 require('../../model/barraProgresso/barraProgresso.php');
 
-$exercicios = new Exercicio;
-$exercicios = $exercicios->getExercicios($_GET['modulo']);
+$exercicio = new Exercicio;
+$exercicios = $exercicio->getExercicios($_GET['modulo']);
 
 
-session_start();
+// session_start();
 $valida=$_SESSION['id'];
 
 
@@ -78,7 +78,14 @@ $porc=$porc*100;
                 
                 <?php foreach ($exercicios as $key => $value) {?>
 
-                    <button id='exer1' onclick="turnActive('exer1', '<?= $value?>')">
+                    <?php 
+
+                        $resposta = $exercicio->getResposta($value);
+                        $classe = (empty($resposta)) ? "vermelho" : "verde";
+
+                    ?>
+
+                    <button id='<?= 'exer'.$value?>' class="<?=$classe?>" onclick="turnActive(<?= 'exer'.$value?>, '<?= $value?>')">
                         <div class="numeroExercicio">
 
                             <h3><?= $value?></h3>

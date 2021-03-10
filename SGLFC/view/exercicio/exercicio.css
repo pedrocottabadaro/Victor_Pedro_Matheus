@@ -209,3 +209,11 @@ button .capitulo{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  .verde {
+      border: 2px solid green !important; 
+  }
+
+  .vermelho {
+    border: 2px solid red !important; 
+  }
