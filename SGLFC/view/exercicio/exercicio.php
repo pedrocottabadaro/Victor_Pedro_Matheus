@@ -85,7 +85,7 @@ $porc=$porc*100;
 
                     ?>
 
-                    <button id='<?= 'exer'.$value?>' class="<?=$classe?>" onclick="turnActive(<?= 'exer'.$value?>, '<?= $value?>')">
+                    <button id='<?= 'exer'.$value?>' class="<?=$classe?>" onclick="turnActive('<?= 'exer'.$value?>', '<?= $value?>')">
                         <div class="numeroExercicio">
 
                             <h3><?= $value?></h3>

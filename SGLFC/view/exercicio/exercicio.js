@@ -2,25 +2,23 @@
 
 
 function turnActive(btn, n){
-    button = document.getElementById(btn);
-    // btn.classlist.toggle("hidden");
-    $("button").each(function(){
+ 
+  button = document.getElementById(btn);
+  // btn.classlist.toggle("hidden");
+  if(button.classList.contains("clicked")){
+      button.classList.toggle("clicked");
+      window.location.href='../exercicioSelecionado/exercicioSelecionado.php?ex=' + n;
+  }
 
-        if($(this).hasClass("clicked")){
-            $(this).removeClass("clicked");
-            $("#"+this.id+" h3").css("color", "white");
-            $("#"+this.id+" h4").css("color", "white");
 
-            window.location.href='../exercicioSelecionado/exercicioSelecionado.php?ex=' + n
-        }
-        
-    });
-    button.classList.toggle("clicked");
-    var nomeExer =$( "#"+btn+ " h3" );
-    var numeroExer =$( "#"+btn+" h4" );
+  $("button").each(function(){
 
-   nomeExer.css("color", "black");
-   numeroExer.css("color", "black");
+    if($(this).hasClass("clicked")){
+        $(this).removeClass("clicked");
+    }
+
+});
+  button.classList.toggle("clicked");
 
 }
 
