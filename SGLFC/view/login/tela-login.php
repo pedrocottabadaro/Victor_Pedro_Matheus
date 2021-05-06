@@ -30,10 +30,6 @@
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha">
             </div>
-            <div class="field">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha">
-            </div>
 
             <input type="submit" name="entrar" value="ENTRAR">
 
